@@ -54,7 +54,13 @@ ul {
     margin-bottom: 24px;
 
     @include md {
+        background: grey;
         margin-bottom: 32px;
+    }
+
+    @include lg {
+        background: lightblue;
+        margin-bottom: 64px;
     }
 
     @include xl {

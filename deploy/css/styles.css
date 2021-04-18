@@ -387,7 +387,14 @@ ul li {
 }
 @media (min-width: 768px 768px) {
   .content {
+    background: grey;
     margin-bottom: 32px;
+  }
+}
+@media (min-width: 992px 1024px) {
+  .content {
+    background: lightblue;
+    margin-bottom: 64px;
   }
 }
 @media (min-width: 1200px 1200px) {
