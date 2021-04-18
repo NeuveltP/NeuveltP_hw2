@@ -365,15 +365,20 @@ ul li {
   list-style: none;
 }
 
+.container-grid {
+  display: grid;
+  grid-template-areas: "header" "hero" "gallery" "whatsnew" "footer";
+}
+
 .content {
   margin-bottom: 24px;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px 768px) {
   .content {
     margin-bottom: 32px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px 1200px) {
   .content {
     margin-bottom: 64px;
   }

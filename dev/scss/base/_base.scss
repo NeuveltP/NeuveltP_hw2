@@ -15,6 +15,14 @@ ul {
     }
 }
 
+.container-grid{
+    display: grid;
+    grid-template-areas: "header"
+    "hero"
+    "gallery"
+    "whatsnew"
+    "footer";
+}
 .content {
     margin-bottom: 24px;
 
