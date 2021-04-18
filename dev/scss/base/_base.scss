@@ -18,12 +18,18 @@ ul {
 
 
 .content {
+    display: grid;
     grid-template-areas: 
     "header"
     "hero"
     "gallery"
     "whatsnew"
     "footer";
+
+    .header{
+        grid-area: header;
+
+    }
 
     margin-bottom: 24px;
 
