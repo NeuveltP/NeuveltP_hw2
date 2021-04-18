@@ -31,6 +31,26 @@ ul {
 
     }
 
+    .hero{
+        grid-area: hero;
+
+    }
+
+    .gallery{
+        grid-area: gallery;
+
+    }
+
+    .whatsnew{
+        grid-area: whatsnew;
+
+    }
+
+    .footer{
+        grid-area: footer;
+
+    }
+
     margin-bottom: 24px;
 
     @include md {
