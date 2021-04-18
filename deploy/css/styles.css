@@ -365,12 +365,8 @@ ul li {
   list-style: none;
 }
 
-.container-grid {
-  display: grid;
-  grid-template-areas: "header" "hero" "gallery" "whatsnew" "footer";
-}
-
 .content {
+  grid-template-areas: "header" "hero" "gallery" "whatsnew" "footer";
   margin-bottom: 24px;
 }
 @media (min-width: 768px 768px) {
