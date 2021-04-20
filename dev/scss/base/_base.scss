@@ -29,33 +29,34 @@ ul {
     .header{
         grid-area: header;
         align-items: center;
-        grid-template-columns: (auto-fit, minmax(100px));
+        grid-template-columns: (576px);
+        
     }
 
     .hero{
         grid-area: hero;
         align-items: center;
-        grid-template-columns: (auto-fit, minmax(100px));
+        grid-template-columns: (576px);
 
     }
 
     .gallery{
         grid-area: gallery;
         align-items: center;
-        grid-template-columns: (auto-fit, minmax(100px));
+        grid-template-columns: (576px);
     }
 
     .whatsnew{
         grid-area: whatsnew;
         align-items: center;
-        grid-template-columns: (auto-fit, minmax(100px));
+        grid-template-columns: (576px);
 
     }
 
     .footer{
         grid-area: footer;
         align-items: center;
-        grid-template-columns: (auto-fit, minmax(100px));
+        grid-template-columns: (576px);
     }
 
     margin-bottom: 24px;

@@ -373,27 +373,27 @@ ul li {
 .content .header {
   grid-area: header;
   align-items: center;
-  grid-template-columns: auto-fit, minmax(100px);
+  grid-template-columns: 576px;
 }
 .content .hero {
   grid-area: hero;
   align-items: center;
-  grid-template-columns: auto-fit, minmax(100px);
+  grid-template-columns: 576px;
 }
 .content .gallery {
   grid-area: gallery;
   align-items: center;
-  grid-template-columns: auto-fit, minmax(100px);
+  grid-template-columns: 576px;
 }
 .content .whatsnew {
   grid-area: whatsnew;
   align-items: center;
-  grid-template-columns: auto-fit, minmax(100px);
+  grid-template-columns: 576px;
 }
 .content .footer {
   grid-area: footer;
   align-items: center;
-  grid-template-columns: auto-fit, minmax(100px);
+  grid-template-columns: 576px;
 }
 @media (min-width: 768px 768px) {
   .content {
