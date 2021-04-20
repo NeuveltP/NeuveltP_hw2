@@ -28,27 +28,34 @@ ul {
 
     .header{
         grid-area: header;
-
+        align-items: center;
+        grid-template-columns: (auto-fit, minmax(100px));
     }
 
     .hero{
         grid-area: hero;
+        align-items: center;
+        grid-template-columns: (auto-fit, minmax(100px));
 
     }
 
     .gallery{
         grid-area: gallery;
-
+        align-items: center;
+        grid-template-columns: (auto-fit, minmax(100px));
     }
 
     .whatsnew{
         grid-area: whatsnew;
+        align-items: center;
+        grid-template-columns: (auto-fit, minmax(100px));
 
     }
 
     .footer{
         grid-area: footer;
-
+        align-items: center;
+        grid-template-columns: (auto-fit, minmax(100px));
     }
 
     margin-bottom: 24px;
@@ -59,7 +66,7 @@ ul {
 
         .gallery{
             display: grid;
-            grid-template-areas: 
+            grid-template-columns:50% 1fr 
             "image1 image2"
             "image3";
 
