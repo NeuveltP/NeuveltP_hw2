@@ -367,7 +367,7 @@ ul li {
 
 .content {
   display: grid;
-  grid-template-areas: "header" "hero" "gallery" "whatsnew" "footer";
+  grid-template-areas: "header" "hero" "herosec1" "herosec2" "gallery" "whatsnew" "footer";
   margin-bottom: 24px;
 }
 .content .header {
@@ -378,7 +378,17 @@ ul li {
 .content .hero {
   grid-area: hero;
   align-items: center;
-  grid-template-columns: 576px;
+  grid-template-columns: 300px, 1fr;
+}
+.content .herosec1 {
+  grid-area: herosec1;
+  align-items: center;
+  grid-template-columns: 300px, 1fr;
+}
+.content .herosec2 {
+  grid-area: herosec2;
+  align-items: center;
+  grid-template-columns: 300px, 1fr;
 }
 .content .gallery {
   grid-area: gallery;

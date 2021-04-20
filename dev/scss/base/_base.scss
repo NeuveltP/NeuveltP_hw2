@@ -22,6 +22,8 @@ ul {
     grid-template-areas: 
     "header"
     "hero"
+    "herosec1"
+    "herosec2"
     "gallery"
     "whatsnew"
     "footer";
@@ -36,7 +38,19 @@ ul {
     .hero{
         grid-area: hero;
         align-items: center;
-        grid-template-columns: (576px);
+        grid-template-columns: (300px, 1fr);
+
+    }
+    .herosec1{
+        grid-area: herosec1;
+        align-items: center;
+        grid-template-columns: (300px, 1fr);
+
+    }
+    .herosec2{
+        grid-area: herosec2;
+        align-items: center;
+        grid-template-columns: (300px, 1fr);
 
     }
 
