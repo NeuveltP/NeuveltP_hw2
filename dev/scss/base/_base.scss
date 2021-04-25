@@ -28,10 +28,29 @@ main {
     "gallery"
     "whatsnew"
     "footer";
+    grid-gap: 10px;
 }
 
     .header{
         grid-area: header;
+        img {
+            width: 25%;
+        }
+    
+        ul {
+            display: grid;
+        }
+    
+        a {
+            display: grid;
+        }
+        @include md {
+            ul {
+                grid-template-columns: repeat(12, 1fr);
+    
+                
+            }
+        }
     }
 
     .hero{
@@ -50,14 +69,10 @@ main {
         @include md {
             ul {
                 grid-template-columns: repeat(12, 1fr);
-    
-                .truck {
-                    grid-column: span 5;
-                }
-                .location {
-                    grid-column: span 7;
-                }
+                grid-template-rows: repeat(6, 1fr);
+                
             }
+            
         }
     }
 
@@ -66,12 +81,32 @@ main {
         grid-area: herosec1;
         align-items: center;
         grid-template-columns: (300px, 1fr);
+        grid-area: hero;
+        
+    
+        ul {
+            display: grid;
+        }
+    
+        a {
+            display: grid;
+        }
+        @include md {
+            ul {
+                grid-template-columns: repeat(12, 1fr);
+                grid-column: span 8;
+                grid-row: span 6; 
+            }
+        }
 
     }
     .herosec2 {
         grid-area: herosec2;
     
         ul {
+            display: grid;
+        }
+        a {
             display: grid;
         }
     
@@ -83,6 +118,8 @@ main {
             img {
                 width: 100%;
             }
+            grid-column: span 4;
+			grid-row: span 6;
             
         }
     }
@@ -90,28 +127,67 @@ main {
 
     .gallery{
         grid-area: gallery;
-        ul{
-            display: grid;
+        display: grid;
+		grid-template-columns: auto auto auto;
+        grid-template-areas: ". gallery .";
+        img {
+            width: 75%;
         }
+    
+        ul {
+            grid-area: gallery;
+			display: grid;
+			
+			grid-template-rows: repeat(1, 1fr);
+			grid-template-areas:
+				"image1"
+				"image2"
+				"image3";
+        }
+    
+        
         @include md {
-            ul {
-                grid-template-columns: 350px 350px;
-                grid-gap: 30px;
-                justify-content: center;
-            }
+            
+                grid-template-columns: repeat(1, 1fr);
+				grid-template-rows: repeat(1, 1fr);
+				grid-template-areas:
+					"image1 image2"
+					"image1 image3";
+    
+                
+            
+        }
+        .image1 {
+            grid-area: image1;
+        }
+        .image2 {
+            grid-area: image2;
+        }
+        .image3 {
+            grid-area: image3;
         }
     }
+    
+    
 
     .whatsnew{
         grid-area: whatsnew;
-        ul{
+        img {
+            width: 30%;
+        }
+    
+        ul {
+            display: grid;
+        }
+    
+        a {
             display: grid;
         }
         @include md {
             ul {
-                grid-template-columns: 350px 350px;
-                grid-gap: 30px;
-                justify-content: center;
+                grid-template-columns: repeat(12, 1fr);
+    
+                
             }
         }
 
@@ -121,7 +197,29 @@ main {
         grid-area: footer;
         .socials ul{
             display:flex;
+        }    
+        img {
+            width: 2.5%;
         }
+        ul {
+            display: grid;
+        }
+    
+        a {
+            display: grid;
+        }
+        @include md {
+            ul {
+                grid-template-columns: repeat(12, 1fr);
+    
+                
+            }
+        }
+        margin-bottom: 24px;
+
+	@include md {
+		margin-bottom: 32px;
+	}
     }
 
     

@@ -369,10 +369,25 @@ main {
   background: lightblue;
   display: grid;
   grid-template-areas: "header" "hero" "herosec1" "herosec2" "gallery" "whatsnew" "footer";
+  grid-gap: 10px;
 }
 
 .header {
   grid-area: header;
+}
+.header img {
+  width: 25%;
+}
+.header ul {
+  display: grid;
+}
+.header a {
+  display: grid;
+}
+@media (min-width: 768px 768px) {
+  .header ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 .hero {
@@ -390,12 +405,7 @@ main {
 @media (min-width: 768px 768px) {
   .hero ul {
     grid-template-columns: repeat(12, 1fr);
-  }
-  .hero ul .truck {
-    grid-column: span 5;
-  }
-  .hero ul .location {
-    grid-column: span 7;
+    grid-template-rows: repeat(6, 1fr);
   }
 }
 
@@ -403,6 +413,20 @@ main {
   grid-area: herosec1;
   align-items: center;
   grid-template-columns: 300px, 1fr;
+  grid-area: hero;
+}
+.herosec1 ul {
+  display: grid;
+}
+.herosec1 a {
+  display: grid;
+}
+@media (min-width: 768px 768px) {
+  .herosec1 ul {
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: span 8;
+    grid-row: span 6;
+  }
 }
 
 .herosec2 {
@@ -411,7 +435,14 @@ main {
 .herosec2 ul {
   display: grid;
 }
+.herosec2 a {
+  display: grid;
+}
 @media (min-width: 768px 768px) {
+  .herosec2 {
+    grid-column: span 4;
+    grid-row: span 6;
+  }
   .herosec2 ul {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -423,37 +454,79 @@ main {
 
 .gallery {
   grid-area: gallery;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: ". gallery .";
+}
+.gallery img {
+  width: 75%;
 }
 .gallery ul {
+  grid-area: gallery;
   display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "image1" "image2" "image3";
 }
 @media (min-width: 768px 768px) {
-  .gallery ul {
-    grid-template-columns: 350px 350px;
-    grid-gap: 30px;
-    justify-content: center;
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "image1 image2" "image1 image3";
   }
+}
+.gallery .image1 {
+  grid-area: image1;
+}
+.gallery .image2 {
+  grid-area: image2;
+}
+.gallery .image3 {
+  grid-area: image3;
 }
 
 .whatsnew {
   grid-area: whatsnew;
 }
+.whatsnew img {
+  width: 30%;
+}
 .whatsnew ul {
+  display: grid;
+}
+.whatsnew a {
   display: grid;
 }
 @media (min-width: 768px 768px) {
   .whatsnew ul {
-    grid-template-columns: 350px 350px;
-    grid-gap: 30px;
-    justify-content: center;
+    grid-template-columns: repeat(12, 1fr);
   }
 }
 
 .footer {
   grid-area: footer;
+  margin-bottom: 24px;
 }
 .footer .socials ul {
   display: flex;
+}
+.footer img {
+  width: 2.5%;
+}
+.footer ul {
+  display: grid;
+}
+.footer a {
+  display: grid;
+}
+@media (min-width: 768px 768px) {
+  .footer ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (min-width: 768px 768px) {
+  .footer {
+    margin-bottom: 32px;
+  }
 }
 
 /* =============
