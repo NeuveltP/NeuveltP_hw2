@@ -17,7 +17,8 @@ ul {
 
 
 
-.content {
+main {
+    background: lightblue;
     display: grid;
     grid-template-areas: 
     "header"
@@ -27,82 +28,104 @@ ul {
     "gallery"
     "whatsnew"
     "footer";
+}
 
     .header{
         grid-area: header;
-        align-items: center;
-        grid-template-columns: (576px);
-        
     }
 
     .hero{
         grid-area: hero;
-        align-items: center;
-        grid-template-columns: (300px, 1fr);
-
+        img {
+            width: 100%;
+        }
+    
+        ul {
+            display: grid;
+        }
+    
+        a {
+            display: grid;
+        }
+        @include md {
+            ul {
+                grid-template-columns: repeat(12, 1fr);
+    
+                .truck {
+                    grid-column: span 5;
+                }
+                .location {
+                    grid-column: span 7;
+                }
+            }
+        }
     }
+
+    
     .herosec1{
         grid-area: herosec1;
         align-items: center;
         grid-template-columns: (300px, 1fr);
 
     }
-    .herosec2{
+    .herosec2 {
         grid-area: herosec2;
-        align-items: center;
-        grid-template-columns: (300px, 1fr);
-
+    
+        ul {
+            display: grid;
+        }
+    
+        @include md {
+            ul {
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+            }
+            img {
+                width: 100%;
+            }
+            
+        }
     }
+
 
     .gallery{
         grid-area: gallery;
-        align-items: center;
-        grid-template-columns: (576px);
+        ul{
+            display: grid;
+        }
+        @include md {
+            ul {
+                grid-template-columns: 350px 350px;
+                grid-gap: 30px;
+                justify-content: center;
+            }
+        }
     }
 
     .whatsnew{
         grid-area: whatsnew;
-        align-items: center;
-        grid-template-columns: (576px);
+        ul{
+            display: grid;
+        }
+        @include md {
+            ul {
+                grid-template-columns: 350px 350px;
+                grid-gap: 30px;
+                justify-content: center;
+            }
+        }
 
     }
 
     .footer{
         grid-area: footer;
-        align-items: center;
-        grid-template-columns: (576px);
-    }
-
-    margin-bottom: 24px;
-
-    @include md {
-        background: grey;
-        margin-bottom: 32px;
-
-        .gallery{
-            display: grid;
-            grid-template-columns:50% 1fr 
-            "image1 image2"
-            "image3";
-
-            .image1{
-                grid-area: image1;
-            }
-            .image2{
-                grid-area: image2
-            }
-            .image3{
-                grid-area: image3
-            }
+        .socials ul{
+            display:flex;
         }
     }
 
-    @include lg {
-        background: lightblue;
-        margin-bottom: 64px;
-    }
+    
+    
 
-    @include xl {
-        margin-bottom: 64px;
-    }
-}
+    
+

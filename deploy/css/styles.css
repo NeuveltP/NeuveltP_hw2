@@ -365,75 +365,95 @@ ul li {
   list-style: none;
 }
 
-.content {
+main {
+  background: lightblue;
   display: grid;
   grid-template-areas: "header" "hero" "herosec1" "herosec2" "gallery" "whatsnew" "footer";
-  margin-bottom: 24px;
 }
-.content .header {
+
+.header {
   grid-area: header;
-  align-items: center;
-  grid-template-columns: 576px;
 }
-.content .hero {
+
+.hero {
   grid-area: hero;
-  align-items: center;
-  grid-template-columns: 300px, 1fr;
 }
-.content .herosec1 {
+.hero img {
+  width: 100%;
+}
+.hero ul {
+  display: grid;
+}
+.hero a {
+  display: grid;
+}
+@media (min-width: 768px 768px) {
+  .hero ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .hero ul .truck {
+    grid-column: span 5;
+  }
+  .hero ul .location {
+    grid-column: span 7;
+  }
+}
+
+.herosec1 {
   grid-area: herosec1;
   align-items: center;
   grid-template-columns: 300px, 1fr;
 }
-.content .herosec2 {
+
+.herosec2 {
   grid-area: herosec2;
-  align-items: center;
-  grid-template-columns: 300px, 1fr;
 }
-.content .gallery {
-  grid-area: gallery;
-  align-items: center;
-  grid-template-columns: 576px;
-}
-.content .whatsnew {
-  grid-area: whatsnew;
-  align-items: center;
-  grid-template-columns: 576px;
-}
-.content .footer {
-  grid-area: footer;
-  align-items: center;
-  grid-template-columns: 576px;
+.herosec2 ul {
+  display: grid;
 }
 @media (min-width: 768px 768px) {
-  .content {
-    background: grey;
-    margin-bottom: 32px;
+  .herosec2 ul {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
-  .content .gallery {
-    display: grid;
-    grid-template-columns: 50% 1fr "image1 image2" "image3";
-  }
-  .content .gallery .image1 {
-    grid-area: image1;
-  }
-  .content .gallery .image2 {
-    grid-area: image2;
-  }
-  .content .gallery .image3 {
-    grid-area: image3;
+  .herosec2 img {
+    width: 100%;
   }
 }
-@media (min-width: 992px 1024px) {
-  .content {
-    background: lightblue;
-    margin-bottom: 64px;
+
+.gallery {
+  grid-area: gallery;
+}
+.gallery ul {
+  display: grid;
+}
+@media (min-width: 768px 768px) {
+  .gallery ul {
+    grid-template-columns: 350px 350px;
+    grid-gap: 30px;
+    justify-content: center;
   }
 }
-@media (min-width: 1200px 1200px) {
-  .content {
-    margin-bottom: 64px;
+
+.whatsnew {
+  grid-area: whatsnew;
+}
+.whatsnew ul {
+  display: grid;
+}
+@media (min-width: 768px 768px) {
+  .whatsnew ul {
+    grid-template-columns: 350px 350px;
+    grid-gap: 30px;
+    justify-content: center;
   }
+}
+
+.footer {
+  grid-area: footer;
+}
+.footer .socials ul {
+  display: flex;
 }
 
 /* =============
