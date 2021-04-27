@@ -365,166 +365,159 @@ ul li {
   list-style: none;
 }
 
-main {
+.content {
   background: lightblue;
   display: grid;
   grid-template-areas: "header" "hero" "herosec1" "herosec2" "gallery" "whatsnew" "footer";
   grid-gap: 10px;
 }
-
-.header {
+.content .header {
   grid-area: header;
 }
-.header img {
+.content .header img {
   width: 25%;
 }
-.header ul {
+.content .header ul {
   display: grid;
 }
-.header a {
+.content .header a {
   display: grid;
 }
 @media (min-width: 768px 768px) {
-  .header ul {
+  .content .header ul {
     grid-template-columns: repeat(12, 1fr);
   }
 }
-
-.hero {
+.content .hero {
   grid-area: hero;
 }
-.hero img {
+.content .hero img {
   width: 100%;
 }
-.hero ul {
+.content .hero ul {
   display: grid;
 }
-.hero a {
+.content .hero a {
   display: grid;
 }
 @media (min-width: 768px 768px) {
-  .hero ul {
+  .content .hero ul {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
 }
-
-.herosec1 {
+.content .herosec1 {
   grid-area: herosec1;
   align-items: center;
   grid-template-columns: 300px, 1fr;
   grid-area: hero;
 }
-.herosec1 ul {
+.content .herosec1 ul {
   display: grid;
 }
-.herosec1 a {
+.content .herosec1 a {
   display: grid;
 }
 @media (min-width: 768px 768px) {
-  .herosec1 ul {
+  .content .herosec1 ul {
     grid-template-columns: repeat(12, 1fr);
     grid-column: span 8;
     grid-row: span 6;
   }
 }
-
-.herosec2 {
+.content .herosec2 {
   grid-area: herosec2;
 }
-.herosec2 ul {
+.content .herosec2 ul {
   display: grid;
 }
-.herosec2 a {
+.content .herosec2 a {
   display: grid;
 }
 @media (min-width: 768px 768px) {
-  .herosec2 {
+  .content .herosec2 {
     grid-column: span 4;
     grid-row: span 6;
   }
-  .herosec2 ul {
+  .content .herosec2 ul {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
-  .herosec2 img {
+  .content .herosec2 img {
     width: 100%;
   }
 }
-
-.gallery {
+.content .gallery {
   grid-area: gallery;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-areas: ". gallery .";
 }
-.gallery img {
+.content .gallery img {
   width: 75%;
 }
-.gallery ul {
+.content .gallery ul {
   grid-area: gallery;
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas: "image1" "image2" "image3";
 }
 @media (min-width: 768px 768px) {
-  .gallery {
+  .content .gallery {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas: "image1 image2" "image1 image3";
   }
 }
-.gallery .image1 {
+.content .gallery .image1 {
   grid-area: image1;
 }
-.gallery .image2 {
+.content .gallery .image2 {
   grid-area: image2;
 }
-.gallery .image3 {
+.content .gallery .image3 {
   grid-area: image3;
 }
-
-.whatsnew {
+.content .whatsnew {
   grid-area: whatsnew;
 }
-.whatsnew img {
+.content .whatsnew img {
   width: 30%;
 }
-.whatsnew ul {
+.content .whatsnew ul {
   display: grid;
 }
-.whatsnew a {
+.content .whatsnew a {
   display: grid;
 }
 @media (min-width: 768px 768px) {
-  .whatsnew ul {
+  .content .whatsnew ul {
     grid-template-columns: repeat(12, 1fr);
   }
 }
-
-.footer {
+.content .footer {
   grid-area: footer;
   margin-bottom: 24px;
 }
-.footer .socials ul {
+.content .footer .socials ul {
   display: flex;
 }
-.footer img {
+.content .footer img {
   width: 2.5%;
 }
-.footer ul {
+.content .footer ul {
   display: grid;
 }
-.footer a {
+.content .footer a {
   display: grid;
 }
 @media (min-width: 768px 768px) {
-  .footer ul {
+  .content .footer ul {
     grid-template-columns: repeat(12, 1fr);
   }
 }
 @media (min-width: 768px 768px) {
-  .footer {
+  .content .footer {
     margin-bottom: 32px;
   }
 }

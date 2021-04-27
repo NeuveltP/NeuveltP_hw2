@@ -17,7 +17,7 @@ ul {
 
 
 
-main {
+.content {
     background: lightblue;
     display: grid;
     grid-template-areas: 
@@ -29,7 +29,7 @@ main {
     "whatsnew"
     "footer";
     grid-gap: 10px;
-}
+
 
     .header{
         grid-area: header;
@@ -221,7 +221,7 @@ main {
 		margin-bottom: 32px;
 	}
     }
-
+}
     
     
 
