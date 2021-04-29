@@ -17,7 +17,7 @@ ul {
 
 
 
-.content {
+main{
     background: lightblue;
     display: grid;
     grid-template-areas: 
@@ -29,7 +29,7 @@ ul {
     "whatsnew"
     "footer";
     grid-gap: 10px;
-
+}
 
     .header{
         grid-area: header;
@@ -70,6 +70,12 @@ ul {
             ul {
                 grid-template-columns: repeat(12, 1fr);
                 grid-template-rows: repeat(6, 1fr);
+                .truck {
+                    grid-column: span 5;
+                }
+                .location {
+                    grid-column: span 7;
+                }
                 
             }
             
@@ -148,15 +154,19 @@ ul {
         
         @include md {
             
-                grid-template-columns: repeat(1, 1fr);
-				grid-template-rows: repeat(1, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(3, 300px);
 				grid-template-areas:
 					"image1 image2"
 					"image1 image3";
     
-                
-            
-        }
+            }
+            @include lg {
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-areas:
+                "image1 image2"
+                "image1 image3";
+			}
         .image1 {
             grid-area: image1;
         }
@@ -195,33 +205,43 @@ ul {
 
     .footer{
         grid-area: footer;
-        .socials ul{
-            display:flex;
-        }    
-        img {
-            width: 2.5%;
-        }
-        ul {
-            display: grid;
+        .socials ul {
+            display: flex;
         }
     
-        a {
-            display: grid;
-        }
-        @include md {
-            ul {
-                grid-template-columns: repeat(12, 1fr);
-    
-                
+        .locations {
+            section ul li {
+                display: grid;
+                grid-template-columns: 20px 200px;
             }
         }
+        @include md {
+            display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		grid-gap: 50px;
+
+		.locations {
+			grid-column: 2 / 5;
+			grid-row: 1 / 4;
+		}
+
+		.newsletter {
+			grid-column: 5 / 6;
+			grid-row: 1 / 2;
+		}
+
+		.socials {
+			grid-column: 5 / 6;
+		}
+	}
         margin-bottom: 24px;
 
 	@include md {
 		margin-bottom: 32px;
 	}
     }
-}
+
     
     
 

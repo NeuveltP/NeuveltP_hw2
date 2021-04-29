@@ -8,3 +8,11 @@
 @import "base/_normalize";
 @import "base/_base";
 @import "base/_typography";
+
+@import "layout/header";
+@import "layout/footer";
+@import "sections/hero";
+
+@import "components/buttons";
+@import "components/forms";
+@import "components/navigation";
