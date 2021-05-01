@@ -65,12 +65,14 @@ main{
     
         a {
             display: grid;
+            grid-template-columns: 90% auto;
+		align-items: center;
         }
         @include md {
             ul {
                 grid-template-columns: repeat(12, 1fr);
                 grid-template-rows: repeat(6, 1fr);
-                .truck {
+                .delivery {
                     grid-column: span 5;
                 }
                 .location {
@@ -235,11 +237,7 @@ main{
 			grid-column: 5 / 6;
 		}
 	}
-        margin-bottom: 24px;
-
-	@include md {
-		margin-bottom: 32px;
-	}
+        
     }
 
     

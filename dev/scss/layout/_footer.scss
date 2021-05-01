@@ -2,9 +2,15 @@
     Footer
 ============= */
 footer {
-	background-color: $nightDark;
+	background-color: $buttonBlue;
 	color: $alpineFrostDark;
-	padding: 16px;
+	padding: 50px;
+
+	.address {
+		a {
+			color: $seaFog;
+		}
+	}
 
 	@include xl {
 		display: grid;

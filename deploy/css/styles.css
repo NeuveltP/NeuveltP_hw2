@@ -401,13 +401,15 @@ main {
 }
 .hero a {
   display: grid;
+  grid-template-columns: 90% auto;
+  align-items: center;
 }
 @media (min-width: 768px 768px) {
   .hero ul {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
-  .hero ul .truck {
+  .hero ul .delivery {
     grid-column: span 5;
   }
   .hero ul .location {
@@ -516,7 +518,6 @@ main {
 
 .footer {
   grid-area: footer;
-  margin-bottom: 24px;
 }
 .footer .socials ul {
   display: flex;
@@ -542,11 +543,6 @@ main {
   }
   .footer .socials {
     grid-column: 5/6;
-  }
-}
-@media (min-width: 768px 768px) {
-  .footer {
-    margin-bottom: 32px;
   }
 }
 
@@ -610,9 +606,12 @@ header > div section img {
     Footer
 ============= */
 footer {
-  background-color: #2A3036;
+  background-color: #023047;
   color: #C8C7BC;
-  padding: 16px;
+  padding: 50px;
+}
+footer .address a {
+  color: #e0dfd5;
 }
 @media (min-width: 1200px 1200px) {
   footer {
