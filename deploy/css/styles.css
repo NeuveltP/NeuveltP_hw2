@@ -366,7 +366,7 @@ ul li {
 }
 
 main {
-  background: lightblue;
+  background: lightyellow;
   display: grid;
   grid-template-areas: "header" "hero" "herosec1" "herosec2" "gallery" "whatsnew" "footer";
   grid-gap: 10px;
@@ -417,46 +417,23 @@ main {
   }
 }
 
-.herosec1 {
-  grid-area: herosec1;
-  align-items: center;
-  grid-template-columns: 300px, 1fr;
-  grid-area: hero;
+.hero-2 {
+  grid-area: hero-2;
 }
-.herosec1 ul {
+.hero-2 ul {
   display: grid;
 }
-.herosec1 a {
+.hero-2 .herosec2 {
   display: grid;
+  grid-template-columns: 70% auto;
 }
 @media (min-width: 768px 768px) {
-  .herosec1 ul {
-    grid-template-columns: repeat(12, 1fr);
-    grid-column: span 8;
-    grid-row: span 6;
+  .hero-2 .herosec2 {
+    grid-template-columns: 70% auto;
   }
-}
-
-.herosec2 {
-  grid-area: herosec2;
-}
-.herosec2 ul {
-  display: grid;
-}
-.herosec2 a {
-  display: grid;
-}
-@media (min-width: 768px 768px) {
-  .herosec2 {
-    grid-column: span 4;
-    grid-row: span 6;
-  }
-  .herosec2 ul {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-  }
-  .herosec2 img {
-    width: 100%;
+  .hero-2 ul {
+    grid-template-columns: 50% auto;
+    grid-gap: 20px;
   }
 }
 
@@ -470,32 +447,23 @@ main {
   width: 75%;
 }
 .gallery ul {
-  grid-area: gallery;
   display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-areas: "image1" "image2" "image3";
 }
 @media (min-width: 768px 768px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 300px);
-    grid-template-areas: "image1 image2" "image1 image3";
+  .gallery ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "image1 image1 image2 image2" "image1 image1 image2 image2" "image1 image1 image3 image3" "image1 image1 image3 image3";
   }
-}
-@media (min-width: 992px 1024px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "image1 image2" "image1 image3";
+  .gallery .image1 {
+    grid-area: image1;
   }
-}
-.gallery .image1 {
-  grid-area: image1;
-}
-.gallery .image2 {
-  grid-area: image2;
-}
-.gallery .image3 {
-  grid-area: image3;
+  .gallery .image2 {
+    grid-area: image2;
+  }
+  .gallery .image3 {
+    grid-area: image3;
+  }
 }
 
 .whatsnew {
@@ -507,12 +475,33 @@ main {
 .whatsnew ul {
   display: grid;
 }
-.whatsnew a {
-  display: grid;
-}
 @media (min-width: 768px 768px) {
   .whatsnew ul {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    justify-content: center;
+    grid-template-areas: "new-1 new-1 new-2 new-2" "new-3 new-3 new-4 new-4" ". new-5 new-5 .";
+  }
+  .whatsnew #whatsnew-1 {
+    grid-area: new-1;
+  }
+  .whatsnew #whatsnew-2 {
+    grid-area: new-2;
+  }
+  .whatsnew #whatsnew-3 {
+    grid-area: new-3;
+  }
+  .whatsnew #whatsnew-4 {
+    grid-area: new-4;
+  }
+  .whatsnew #whatsnew-5 {
+    grid-area: new-5;
+  }
+}
+@media (min-width: 992px 1024px) {
+  .whatsnew ul {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "new-1 new-1 new-2 new-2 new-3 new-3" ". new-4 new-4 new-5 new-5 .";
   }
 }
 
@@ -529,20 +518,23 @@ main {
 @media (min-width: 768px 768px) {
   .footer {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 50px;
+    grid-template-areas: ". locations . newsletter" ". locations . socials";
   }
   .footer .locations {
-    grid-column: 2/5;
-    grid-row: 1/4;
+    grid-area: locations;
   }
   .footer .newsletter {
-    grid-column: 5/6;
-    grid-row: 1/2;
+    grid-area: newsletter;
   }
   .footer .socials {
-    grid-column: 5/6;
+    grid-area: socials;
+  }
+}
+@media (min-width: 992px 1024px) {
+  .footer {
+    grid-template-areas: ". locations . newsletter . socials";
   }
 }
 
@@ -568,10 +560,56 @@ p {
 }
 
 /* =============
+    Buttons
+============= */
+button {
+  cursor: pointer;
+}
+
+.yellow-button {
+  background-color: #FFD205;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.25s;
+}
+.yellow-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* =============
+    Forms
+============= */
+[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+  box-shadow: none;
+}
+
+[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus {
+  box-shadow: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  -webkit-appearance: none;
+}
+
+/* =============
+    Navigation
+============= */
+a {
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+/* =============
     Header
 ============= */
 header {
-  background-color: #2A3036;
+  background-color: #FFAB4D;
   display: grid;
 }
 @media (min-width: 1200px 1200px) {
@@ -611,7 +649,7 @@ footer {
   padding: 50px;
 }
 footer .address a {
-  color: #e0dfd5;
+  color: #fff;
 }
 @media (min-width: 1200px 1200px) {
   footer {
@@ -764,52 +802,40 @@ footer > div #social ul li a:visited:active {
   background: url(../../../deploy/img/heroimage.jpg);
   background-size: cover;
   background-position: center;
-  height: 20px;
+  height: 10px;
   width: 100%;
 }
 
-/* =============
-    Buttons
-============= */
-button {
-  cursor: pointer;
+.hero ul .details h5 {
+  display: none;
 }
-
-.yellow-button {
-  background-color: #FFD205;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
+.hero ul .details a {
+  color: #023047;
   padding: 10px;
-  transition: 0.25s;
+  min-height: 100px;
 }
-.yellow-button:hover {
-  background-color: #000;
-  color: #fff;
+.hero ul .delivery a {
+  background: #FFAB4D;
 }
-
-/* =============
-    Forms
-============= */
-[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
-  box-shadow: none;
+.hero ul .delivery a:hover {
+  background: #b09105;
 }
-
-[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus {
-  box-shadow: none;
+.hero ul .location a {
+  background: #FAE06A;
 }
-
-input[type=text],
-input[type=email],
-input[type=password],
-textarea {
-  -webkit-appearance: none;
+.hero ul .location a:hover {
+  background: #d1ab00;
+}
+@media (min-width: 768px 768px) {
+  .hero ul .details h5 {
+    display: inline;
+    padding: 10px;
+  }
 }
 
-/* =============
-    Navigation
-============= */
-a {
-  text-decoration: none;
-  transition: 0.25s;
+#section-1 {
+  background-color: 0;
+  color: #000;
+  padding: 100px 0;
+  text-align: center;
 }

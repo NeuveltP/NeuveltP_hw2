@@ -319,6 +319,14 @@
       "oAP" : "\/dev\/content\/_whatsnew.html",
       "oF" : 0
     },
+    "\/dev\/content\/hero-2.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/content\/hero-2.html",
+      "oF" : 0
+    },
     "\/dev\/global\/head.kit" : {
       "cB" : 0,
       "ft" : 2048,
