@@ -1,0 +1,16 @@
+form input {
+	width: 80%;
+	padding: 20px;
+}
+
+form button {
+	//background: $saffron;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+
+	&:hover {
+		//background: $electricYellowDark;
+		transition: background-color ease 0.2s;
+	}
+}
