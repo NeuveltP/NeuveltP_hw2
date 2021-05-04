@@ -1,5 +1,5 @@
 .gallery {
-	width: 100%;
+	width: 1fr;
 
 	.image {
 		background-repeat: no-repeat;
@@ -8,21 +8,26 @@
 
 	.image1 {
 		background-image: url("/deploy/img/gal1.png");
-		height: 500px;
-		width: 100%;
+		height: 800px;
+		width: 500px;
+		
 	}
 	.image2 {
 		background-image: url("/deploy/img/gal2.png");
-		height: 700px;
-		width: 100%;
+		height: 400px;
+		width: 500px;
 	}
 
 	.image3 {
 		background-image: url("/deploy/img/gal3.png");
-		height: 500px;
-		width: 100%;
-		display: none;
+		height: 400px;
+		width: 500px;
+		
 	}
-	
+	@include md {
+		.image {
+			height: 700px;
+		}
+	}
 	
 }

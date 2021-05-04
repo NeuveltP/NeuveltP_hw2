@@ -263,6 +263,14 @@
       "oAP" : "\/deploy\/index.html",
       "oF" : 0
     },
+    "\/deploy\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/index.html",
+      "oF" : 0
+    },
     "\/design\/NeuveltP_homeworkSketch1.sketch" : {
       "cB" : 0,
       "ft" : 8192,
@@ -543,7 +551,7 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/dev\/scss\/sections\/footer.css",
       "oF" : 0,
       "oS" : 0,
@@ -569,7 +577,7 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/dev\/scss\/sections\/gallery.css",
       "oF" : 0,
       "oS" : 0,
@@ -595,7 +603,7 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/dev\/scss\/sections\/header.css",
       "oF" : 0,
       "oS" : 0,
@@ -628,6 +636,18 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/dev\/scss\/sections\/whatsnew.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/scss\/sections\/whatsnew-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/dev\/scss\/sections\/whatsnew.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -635,7 +655,7 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/dev\/scss\/sections\/whatsnew.css",
       "oF" : 0,
       "oS" : 0,

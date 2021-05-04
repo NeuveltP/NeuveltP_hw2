@@ -1,11 +1,11 @@
 .whatsnew {
-	//@include md {
-	//	width: 75%;
-	//	margin: 30px auto;
-	//}
+	@include md {
+		width: 75%;
+		margin: 30px auto;
+	}
 
 	li {
-		background-color: #FFAB4D;
+		background-color: #FAE06A;
         
 
 		.new-content {
@@ -13,9 +13,31 @@
 		}
 
 		button {
-			background: #EE6C4D;;
+			background: #EE6C4D;
 			border: none;
 			padding: 5px 10px;
+		}
+	}
+	ul {
+		.details h5 {
+			display: none;
+		}
+		.details a {
+			color:  #FAE06A;
+			padding: 10px;
+			min-height: 10px;
+		}
+		.delivery a {
+			background: $yellow2;
+			&:hover {
+				background: darken($corn, 10%);
+			}
+		}
+		.location a {
+			background: #FAE06A;
+			&:hover {
+				background: darken($tangerine, 10%);
+			}
 		}
 	}
 }
@@ -29,12 +51,23 @@
 		background: ("/deploy/img/whatsnew1.png") no-repeat;
 		background-size: cover;
 	}
+	
 }
 
 #whatsnew-2 {
 	.new-image {
 		background: url("/deploy/img/whatsnew2.png") no-repeat;
 		background-size: cover;
+	}
+	ul {
+		.details h5 {
+			display: none;
+		}
+		.details a {
+			color:  #FAE06A;
+			padding: 10px;
+			min-height: 10px;
+		}
 	}
 }
 
@@ -43,6 +76,16 @@
 		background: url("/deploy/img/whatsnew3.png") no-repeat;
 		background-size: cover;
 	}
+	ul {
+		.details h5 {
+			display: none;
+		}
+		.details a {
+			color:  #FAE06A;
+			padding: 10px;
+			min-height: 10px;
+		}
+	}
 }
 
 #whatsnew-4 {
@@ -50,11 +93,31 @@
 		background: url("/deploy/img/whatsnew4.png") no-repeat;
 		background-size: cover;
 	}
+	ul {
+		.details h5 {
+			display: none;
+		}
+		.details a {
+			color:  #FAE06A;
+			padding: 10px;
+			min-height: 10px;
+		}
+	}
 }
 
 #whatsnew-5 {
 	.new-image {
 		background: url("/deploy/img/whatsnew5.png") no-repeat;
 		background-size: cover;
+	}
+	ul {
+		.details h5 {
+			display: none;
+		}
+		.details a {
+			color:  #FAE06A;
+			padding: 10px;
+			min-height: 10px;
+		}
 	}
 }

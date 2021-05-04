@@ -109,13 +109,9 @@ main{
 
 
     .gallery{
-        grid-area: gallery;
+        
         display: grid;
-		grid-template-columns: auto auto auto;
-        grid-template-areas: ". gallery .";
-        img {
-            width: 75%;
-        }
+		
     
         ul {
 			display: grid;
@@ -125,7 +121,7 @@ main{
         @include md {
             ul{
             
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(5, 1fr);
 				grid-template-rows: repeat(3, 1fr);
 				grid-template-areas:
 					"image1 image1 image2 image2"
