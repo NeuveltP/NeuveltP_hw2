@@ -943,30 +943,14 @@ form button:hover {
   background-size: cover;
 }
 
-#whatsnew-2 .new-image {
+#whatsnew-2 ul .new-image {
   background: url("/deploy/img/whatsnew2.png") no-repeat;
   background-size: cover;
-}
-#whatsnew-2 ul .details h5 {
-  display: none;
-}
-#whatsnew-2 ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
 }
 
 #whatsnew-3 .new-image {
   background: url("/deploy/img/whatsnew3.png") no-repeat;
   background-size: cover;
-}
-#whatsnew-3 ul .details h5 {
-  display: none;
-}
-#whatsnew-3 ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
 }
 
 #whatsnew-4 .new-image {
