@@ -148,9 +148,7 @@ main{
 
     .whatsnew{
         grid-area: whatsnew;
-        img {
-            width: 30%;
-        }
+       
     
         ul {
             display: grid;
@@ -159,7 +157,7 @@ main{
        
         @include md {
             ul {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: (300px, 300px);
                 grid-gap: 30px;
                 justify-content: center;
                 grid-template-areas:

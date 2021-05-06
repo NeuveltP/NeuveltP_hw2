@@ -463,15 +463,12 @@ main {
 .whatsnew {
   grid-area: whatsnew;
 }
-.whatsnew img {
-  width: 30%;
-}
 .whatsnew ul {
   display: grid;
 }
 @media (min-width: 768px 768px) {
   .whatsnew ul {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 300px, 300px;
     grid-gap: 30px;
     justify-content: center;
     grid-template-areas: "new-1 new-1 new-2 new-2" "new-3 new-3 new-4 new-4" ". new-5 new-5 .";
