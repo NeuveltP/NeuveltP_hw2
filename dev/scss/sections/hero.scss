@@ -22,18 +22,18 @@
 		.order a {
 			background: $corn;
 			&:hover {
-				background: darken($corn, 10%);
+				background: darken($yellow2, 10%);
 			}
 		}
 		.location a {
-			background: $tangerine;
+			background: $lightYellow;
 
 			.bold {
 				font-weight: 600;
 			}
 
 			&:hover {
-				background: darken($tangerine, 10%);
+				background: darken($lightYellow, 10%);
 			}
 		}
 

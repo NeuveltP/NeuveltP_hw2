@@ -221,6 +221,94 @@ main {
 		grid-template-areas: ". locations . newsletter . socials";
 	}
 }
+    .whatsnew{
+        grid-area: whatsnew;
+        img {
+            width: 30%;
+        }
+    
+        ul {
+            display: grid;
+        }
+    
+       
+        @include md {
+            ul {
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 30px;
+                justify-content: center;
+                grid-template-areas:
+                    "new-1 new-1 new-2 new-2"
+                    "new-3 new-3 new-4 new-4"
+                    ". new-5 new-5 .";
+            }
+    
+            #whatsnew-1 {
+                grid-area: new-1;
+            }
+            #whatsnew-2 {
+                grid-area: new-2;
+            }
+            #whatsnew-3 {
+                grid-area: new-3;
+            }
+            #whatsnew-4 {
+                grid-area: new-4;
+            }
+            #whatsnew-5 {
+                grid-area: new-5;
+            }
+        }
+        @include lg {
+            ul {
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-areas:
+                    "new-1 new-1 new-2 new-2 new-3 new-3"
+                    ". new-4 new-4 new-5 new-5 .";
+            }
+        }
+    }
+
+    .footer{
+        grid-area: footer;
+        
+        .socials ul {
+            display: flex;
+        }
+    
+        .locations {
+            section ul li {
+                display: grid;
+                grid-template-columns: 20px 200px;
+            }
+        }
+        @include md {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 50px;
+            grid-template-areas:
+                ". locations . newsletter"
+                ". locations . socials";
+    
+            .locations {
+                grid-area: locations;
+            }
+    
+            .newsletter {
+                grid-area: newsletter;
+            }
+    
+            .socials {
+                grid-area: socials;
+            }
+        }
+    
+        @include lg {
+            grid-template-areas: ". locations . newsletter . socials";
+        }
+    }
+    
+    
 
     
 
