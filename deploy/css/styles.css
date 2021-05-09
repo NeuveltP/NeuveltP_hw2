@@ -384,7 +384,7 @@ main {
 .header a {
   display: grid;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .header ul {
     grid-template-columns: repeat(12, 1fr);
   }
@@ -404,7 +404,7 @@ main {
   grid-template-columns: 90% auto;
   align-items: center;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .hero ul {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -427,7 +427,7 @@ main {
   display: grid;
   grid-template-columns: 70% auto;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .hero-2 .herosec2 {
     grid-template-columns: 70% auto;
   }
@@ -443,7 +443,7 @@ main {
 .gallery ul {
   display: grid;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .gallery ul {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -469,7 +469,7 @@ main {
 .whatsnew ul {
   display: grid;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .whatsnew ul {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
@@ -492,7 +492,7 @@ main {
     grid-area: new-5;
   }
 }
-@media (min-width: 992px 1024px) {
+@media (min-width: 1024px) {
   .whatsnew ul {
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "new-1 new-1 new-2 new-2 new-3 new-3" ". new-4 new-4 new-5 new-5 .";
@@ -509,7 +509,7 @@ main {
   display: grid;
   grid-template-columns: 20px 200px;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .footer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -526,7 +526,7 @@ main {
     grid-area: socials;
   }
 }
-@media (min-width: 992px 1024px) {
+@media (min-width: 1024px) {
   .footer {
     grid-template-areas: ". locations . newsletter . socials";
   }
@@ -606,13 +606,13 @@ header {
   background-color: #FFAB4D;
   display: grid;
 }
-@media (min-width: 1200px 1200px) {
+@media (min-width: 1200px) {
   header {
     grid-template-areas: ". header .";
     grid-template-columns: auto 1200px auto;
   }
 }
-@media (min-width: 1200px 1200px) {
+@media (min-width: 1200px) {
   header > div {
     grid-area: header;
   }
@@ -623,12 +623,12 @@ header > div section {
 header > div section img {
   width: 96px;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   header > div section img {
     width: 123px;
   }
 }
-@media (min-width: 992px 1024px) {
+@media (min-width: 1024px) {
   header > div section img {
     width: 150px;
   }
@@ -646,7 +646,7 @@ header > div section img {
   color: #fff;
   padding: 50px, 50px;
 }
-@media (min-width: 1200px 1200px) {
+@media (min-width: 1200px) {
   .footer {
     display: grid;
     grid-template-areas: ". footer .";
@@ -657,19 +657,19 @@ header > div section img {
   display: grid;
   gap: 24px;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .footer > div {
     grid-template-areas: "locations newsletter" "locations social";
     grid-template-columns: 50% auto;
   }
 }
-@media (min-width: 992px 1024px) {
+@media (min-width: 1024px) {
   .footer > div {
     grid-template-areas: "locations newsletter social";
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1200px 1200px) {
+@media (min-width: 1200px) {
   .footer > div {
     grid-area: footer;
   }
@@ -700,7 +700,7 @@ header > div section img {
   display: flex;
   margin-right: 16px;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .footer > div #locations {
     grid-area: locations;
   }
@@ -712,12 +712,12 @@ header > div section img {
 .footer > div #locations a:visited {
   color: #C8C7BC;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .footer > div #locations #nova {
     border: none;
   }
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .footer > div #newsletter {
     grid-area: newsletter;
   }
@@ -748,18 +748,18 @@ header > div section img {
   margin-left: auto;
   margin-top: 16px;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .footer > div #social {
     grid-area: social;
     margin-top: -100px;
   }
 }
-@media (min-width: 992px 1024px) {
+@media (min-width: 1024px) {
   .footer > div #social {
     margin-top: 0px;
   }
 }
-@media (min-width: 992px 1024px) {
+@media (min-width: 1024px) {
   .footer > div #social h1 {
     text-align: right;
   }
@@ -768,7 +768,7 @@ header > div section img {
   border: none;
   display: flex;
 }
-@media (min-width: 992px 1024px) {
+@media (min-width: 1024px) {
   .footer > div #social ul {
     justify-content: flex-end;
   }
@@ -776,7 +776,7 @@ header > div section img {
 .footer > div #social ul li {
   margin-right: 16px;
 }
-@media (min-width: 992px 1024px) {
+@media (min-width: 1024px) {
   .footer > div #social ul li {
     margin-left: 16px;
     margin-right: 0px;
@@ -820,7 +820,7 @@ header > div section img {
 .hero ul .location a:hover {
   background: #d1ab00;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .hero ul .details h5 {
     display: inline;
     padding: 10px;
@@ -885,7 +885,7 @@ form button:hover {
   height: 50px;
 }
 
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .whatsnew {
     width: 75%;
     margin: 30px auto;
@@ -1006,7 +1006,7 @@ form button:hover {
   height: 400px;
   width: 500px;
 }
-@media (min-width: 768px 768px) {
+@media (min-width: 768px) {
   .gallery .image {
     height: 700px;
   }
