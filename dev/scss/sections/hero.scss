@@ -1,42 +1,47 @@
-.hero-img{
-    background: url(../../../deploy/img/heroimage.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 10px;
-    width: 100%;
+.hero-img {
+	background: url("../../../deploy/img/hero/heroimage.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 50vh;
+	width: 100%;
 }
+
 .hero {
 	ul {
+		a {
+			text-decoration: none;
+		}
 		.details h5 {
 			display: none;
 		}
 		.details a {
-			color: $buttonBlue;
-			padding: 10px;
-			min-height: 100px;
+			color: $aztec;
+			padding: 20px;
+			min-height: 110px;
 		}
-		.delivery a {
-			background: $yellow2;
+		.order a {
+			background: $corn;
 			&:hover {
 				background: darken($corn, 10%);
 			}
 		}
 		.location a {
-			background: #FAE06A;
+			background: $tangerine;
 
-			.bold{
-				font-weight:600;
+			.bold {
+				font-weight: 600;
 			}
+
 			&:hover {
 				background: darken($tangerine, 10%);
 			}
 		}
 
-		@include md {
-			.details h5 {
-				display: inline;
-				padding: 10px;
-			}
-		}
+		// @include md {
+		// 	.details h5 {
+		// 		display: inline;
+		// 		padding: 10px;
+		// 	}
+		// }
 	}
 }

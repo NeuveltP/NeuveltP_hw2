@@ -1,47 +1,31 @@
 .whatsnew {
-	@include md {
-		
-		width: 75%;
-		margin: 30px auto;
+	h1 {
+		font-weight: 400;
+		font-size: rem-calc(27);
 	}
 
 	li {
-		background-color: #FAE06A;
-        
+		background: $lightYellow;
 
 		.new-content {
-			
 			padding: 0 30px 30px;
 		}
 
 		button {
-			background: #EE6C4D;
+			background: $tangerine;
 			border: none;
 			padding: 5px 10px;
 		}
+
+		p {
+			font-size: rem-calc(16);
+			line-height: 1.4;
+		}
 	}
-	ul {
-		.details h5 {
-			
-			display: none;
-		}
-		.details a {
-			color:  #FAE06A;
-			padding: 10px;
-			min-height: 10px;
-		}
-		.delivery a {
-			background: $yellow2;
-			&:hover {
-				background: darken($corn, 10%);
-			}
-		}
-		.location a {
-			background: #FAE06A;
-			&:hover {
-				background: darken($tangerine, 10%);
-			}
-		}
+
+	@include md {
+		width: 75%;
+		margin: 30px auto;
 	}
 }
 
@@ -49,64 +33,37 @@
 	height: 180px;
 }
 
-.whatsnew-1 {
+#whatsnew-1 {
 	.new-image {
-		
-		background: ("/deploy/img/whatsnew1.png") no-repeat;
+		background: url("/deploy/img/whatsnew/whatsnew1.png") no-repeat;
 		background-size: cover;
 	}
-	
 }
 
 #whatsnew-2 {
-	ul{
 	.new-image {
-		background: url("/deploy/img/whatsnew2.png") no-repeat;
+		background: url("/deploy/img/whatsnew/whatsnew2.png") no-repeat;
 		background-size: cover;
 	}
-
-}
-	
 }
 
 #whatsnew-3 {
 	.new-image {
-		background: url("/deploy/img/whatsnew3.png") no-repeat;
+		background: url("/deploy/img/whatsnew/whatsnew3.png") no-repeat;
 		background-size: cover;
 	}
-
 }
 
 #whatsnew-4 {
 	.new-image {
-		background: url("/deploy/img/whatsnew4.png") no-repeat;
+		background: url("/deploy/img/whatsnew/whatsnew4.png") no-repeat;
 		background-size: cover;
-	}
-	ul {
-		.details h5 {
-			display: none;
-		}
-		.details a {
-			color:  #FAE06A;
-			padding: 10px;
-			min-height: 10px;
-		}
 	}
 }
 
 #whatsnew-5 {
 	.new-image {
-		background: url("/deploy/img/whatsnew5.png") no-repeat;
+		background: url("/deploy/img/whatsnew/whatsnew5.png") no-repeat;
 		background-size: cover;
-	}
-	ul {
-		.details h5 {
-			display: none;
-		}
-		.details a {
-			color:  #FAE06A;
-			padding: 10px;
-			min-height: 10px;
-		}
 	}
 }

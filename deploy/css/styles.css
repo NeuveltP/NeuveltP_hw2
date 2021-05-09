@@ -366,28 +366,21 @@ ul li {
 }
 
 main {
-  background: lightyellow;
   display: grid;
-  grid-template-areas: "header" "hero" "herosec1" "herosec2" "gallery" "whatsnew" "footer";
-  grid-gap: 10px;
+  grid-template-areas: "header" "search" "hero" "locations" "hero-2" "whatsnew" "footer";
 }
 
 .header {
   grid-area: header;
 }
-.header img {
-  width: 25%;
+
+.search {
+  grid-area: search;
 }
-.header ul {
+.search form {
   display: grid;
-}
-.header a {
-  display: grid;
-}
-@media (min-width: 768px 768px) {
-  .header ul {
-    grid-template-columns: repeat(12, 1fr);
-  }
+  grid-template-columns: 85% auto;
+  grid-gap: 20px;
 }
 
 .hero {
@@ -401,19 +394,38 @@ main {
 }
 .hero a {
   display: grid;
-  grid-template-columns: 90% auto;
+  grid-template-columns: 80% auto;
   align-items: center;
 }
 @media (min-width: 768px 768px) {
   .hero ul {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
-  .hero ul .delivery {
-    grid-column: span 5;
+  .hero ul .order {
+    grid-column: span 3;
   }
   .hero ul .location {
-    grid-column: span 7;
+    grid-column: span 3;
+  }
+}
+
+.location {
+  grid-area: planning;
+}
+.location ul {
+  display: grid;
+}
+.location .locateinfo {
+  display: grid;
+  grid-template-columns: 70% auto;
+}
+@media (min-width: 768px 768px) {
+  .location .locateinfo {
+    grid-template-columns: 70% auto;
+  }
+  .location ul {
+    grid-template-columns: 50% auto;
+    grid-gap: 20px;
   }
 }
 
@@ -422,75 +434,66 @@ main {
 }
 .hero-2 ul {
   display: grid;
-}
-.hero-2 .herosec2 {
-  display: grid;
-  grid-template-columns: 70% auto;
+  grid-template-rows: 360px 480px;
 }
 @media (min-width: 768px 768px) {
-  .hero-2 .herosec2 {
-    grid-template-columns: 70% auto;
-  }
   .hero-2 ul {
-    grid-template-columns: 50% auto;
-    grid-gap: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 200px);
+  }
+  .hero-2 ul .image1 {
+    grid-column: 1/5;
+    grid-row: 1/5;
+  }
+  .hero-2 ul .image2 {
+    grid-column: auto/span 3;
+    grid-row: 1/5;
+  }
+}
+@media (min-width: 1200px 1200px) {
+  .hero-2 ul .image1 {
+    grid-column: 1/5;
+  }
+  .hero-2 ul .image2 {
+    grid-column: auto/span 3;
+    grid-row: 1/3;
+  }
+  .hero-2 ul .image3 {
+    grid-column: auto/span 3;
+    grid-row: auto/span 2;
   }
 }
 
-.gallery {
-  display: grid;
+.new {
+  grid-area: new;
 }
-.gallery ul {
-  display: grid;
-}
-@media (min-width: 768px 768px) {
-  .gallery ul {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "image1 image1 image2 image2" "image1 image1 image2 image2" "image1 image1 image3 image3" "image1 image1 image3 image3";
-  }
-  .gallery .image1 {
-    grid-area: image1;
-  }
-  .gallery .image2 {
-    grid-area: image2;
-  }
-  .gallery .image3 {
-    grid-area: image3;
-  }
-}
-
-.whatsnew {
-  grid-area: whatsnew;
-}
-.whatsnew ul {
+.new ul {
   display: grid;
 }
 @media (min-width: 768px 768px) {
-  .whatsnew ul {
-    grid-template-columns: 300px, 300px;
+  .new ul {
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    justify-content: center;
     grid-template-areas: "new-1 new-1 new-2 new-2" "new-3 new-3 new-4 new-4" ". new-5 new-5 .";
   }
-  .whatsnew #whatsnew-1 {
+  .new #whatsnew-1 {
     grid-area: new-1;
   }
-  .whatsnew #whatsnew-2 {
+  .new #whatsnew-2 {
     grid-area: new-2;
   }
-  .whatsnew #whatsnew-3 {
+  .new #whatsnew-3 {
     grid-area: new-3;
   }
-  .whatsnew #whatsnew-4 {
+  .new #whatsnew-4 {
     grid-area: new-4;
   }
-  .whatsnew #whatsnew-5 {
+  .new #whatsnew-5 {
     grid-area: new-5;
   }
 }
 @media (min-width: 992px 1024px) {
-  .whatsnew ul {
+  .new ul {
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "new-1 new-1 new-2 new-2 new-3 new-3" ". new-4 new-4 new-5 new-5 .";
   }
@@ -797,30 +800,55 @@ header > div section img {
   color: #FFD205;
 }
 
+.search {
+  height: 70px;
+  margin: 10px 10px 0;
+}
+.search form input {
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #93a8ac;
+  padding: 5px;
+}
+.search form button {
+  background: #ffd205;
+  border: none;
+  border-radius: 4px;
+  height: 50px;
+}
+@media (min-width: 768px 768px) {
+  .search form input {
+    font-size: 2.1875rem;
+  }
+}
+
 .hero-img {
-  background: url(../../../deploy/img/heroimage.jpg);
+  background: url("../../../deploy/img/hero/heroimage.jpg");
   background-size: cover;
   background-position: center;
-  height: 10px;
+  height: 50vh;
   width: 100%;
 }
 
+.hero ul a {
+  text-decoration: none;
+}
 .hero ul .details h5 {
   display: none;
 }
 .hero ul .details a {
-  color: #023047;
-  padding: 10px;
-  min-height: 100px;
+  color: #2a3036;
+  padding: 20px;
+  min-height: 110px;
 }
-.hero ul .delivery a {
-  background: #FFAB4D;
+.hero ul .order a {
+  background: #e2ba06;
 }
-.hero ul .delivery a:hover {
+.hero ul .order a:hover {
   background: #b09105;
 }
 .hero ul .location a {
-  background: #FAE06A;
+  background: #ffd205;
 }
 .hero ul .location a .bold {
   font-weight: 600;
@@ -828,178 +856,83 @@ header > div section img {
 .hero ul .location a:hover {
   background: #d1ab00;
 }
-@media (min-width: 768px 768px) {
-  .hero ul .details h5 {
-    display: inline;
-    padding: 10px;
+
+.locations .locateinfo {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+}
+.locations .locateinfo h1 {
+  color: #2a3036;
+  font-weight: 400;
+  font-size: 2.1875rem;
+}
+.locations .locateinfo button {
+  background: #ffd205;
+  padding: 10px 20px;
+  border: none;
+}
+.locations .locateinfo button:hover {
+  background: #9e8200;
+}
+@media (min-width: 992px 1024px) {
+  .locations {
+    width: 75%;
+    margin: 0 auto;
   }
 }
 
-#section-1 {
-  background-color: 0;
-  color: #fff;
-  padding: 100px 0;
-  text-align: center;
+.whatsnew h1 {
+  font-weight: 400;
+  font-size: 1.6875rem;
 }
-
-.footer {
-  background: #023047;
-  padding: 30px;
+.whatsnew li {
+  background: #F8CD63;
 }
-.footer h1 {
-  text-align: center;
+.whatsnew li .new-content {
+  padding: 0 30px 30px;
 }
-
-.footer ul {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-.footer ul li {
-  margin: 10px;
-}
-.footer ul a:hover {
-  opacity: 0.5;
-  transition: opacity ease 0.2s;
-}
-
-form input {
-  width: 80%;
-  padding: 20px;
-}
-
-form button {
-  padding: 10px 15px;
+.whatsnew li button {
+  background: #ffd205;
   border: none;
-  border-radius: 5px;
+  padding: 5px 10px;
 }
-form button:hover {
-  transition: background-color ease 0.2s;
+.whatsnew li p {
+  font-size: 1rem;
+  line-height: 1.4;
 }
-
-.search {
-  height: 70px;
-  margin: 30px 10px 0;
-}
-.search form input {
-  border: none;
-  border-bottom: 1px solid #000;
-  padding: 5px;
-}
-.search form button {
-  background: #FFAB4D;
-  border: none;
-  border-radius: 4px;
-  height: 50px;
-}
-
 @media (min-width: 768px 768px) {
   .whatsnew {
     width: 75%;
     margin: 30px auto;
   }
 }
-.whatsnew li {
-  background-color: #FAE06A;
-}
-.whatsnew li .new-content {
-  padding: 0 30px 30px;
-}
-.whatsnew li button {
-  background: #EE6C4D;
-  border: none;
-  padding: 5px 10px;
-}
-.whatsnew ul .details h5 {
-  display: none;
-}
-.whatsnew ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
-}
-.whatsnew ul .delivery a {
-  background: #FFAB4D;
-}
-.whatsnew ul .delivery a:hover {
-  background: #b09105;
-}
-.whatsnew ul .location a {
-  background: #FAE06A;
-}
-.whatsnew ul .location a:hover {
-  background: #d1ab00;
-}
 
 .new-image {
   height: 180px;
 }
 
-.whatsnew-1 .new-image {
-  background: "/deploy/img/whatsnew1.png" no-repeat;
+#whatsnew-1 .new-image {
+  background: url("/deploy/img/whatsnew/whatsnew1.png") no-repeat;
   background-size: cover;
 }
 
-#whatsnew-2 ul .new-image {
-  background: url("/deploy/img/whatsnew2.png") no-repeat;
+#whatsnew-2 .new-image {
+  background: url("/deploy/img/whatsnew/whatsnew2.png") no-repeat;
   background-size: cover;
 }
 
 #whatsnew-3 .new-image {
-  background: url("/deploy/img/whatsnew3.png") no-repeat;
+  background: url("/deploy/img/whatsnew/whatsnew3.png") no-repeat;
   background-size: cover;
 }
 
 #whatsnew-4 .new-image {
-  background: url("/deploy/img/whatsnew4.png") no-repeat;
+  background: url("/deploy/img/whatsnew/whatsnew4.png") no-repeat;
   background-size: cover;
-}
-#whatsnew-4 ul .details h5 {
-  display: none;
-}
-#whatsnew-4 ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
 }
 
 #whatsnew-5 .new-image {
-  background: url("/deploy/img/whatsnew5.png") no-repeat;
+  background: url("/deploy/img/whatsnew/whatsnew5.png") no-repeat;
   background-size: cover;
-}
-#whatsnew-5 ul .details h5 {
-  display: none;
-}
-#whatsnew-5 ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
-}
-
-.gallery {
-  width: 1fr;
-}
-.gallery .image {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.gallery .image1 {
-  background-image: url("/deploy/img/gal1.png");
-  height: 800px;
-  width: 500px;
-}
-.gallery .image2 {
-  background-image: url("/deploy/img/gal2.png");
-  height: 400px;
-  width: 500px;
-}
-.gallery .image3 {
-  background-image: url("/deploy/img/gal3.png");
-  height: 400px;
-  width: 500px;
-}
-@media (min-width: 768px 768px) {
-  .gallery .image {
-    height: 700px;
-  }
 }

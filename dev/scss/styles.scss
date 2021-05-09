@@ -19,9 +19,8 @@
 @import "layout/footer";
 
 // Sections Styles
+@import "sections/_search";
 @import "sections/hero";
-@import "sections/_section-1";
-@import "sections/footer";
-@import "sections/header";
+@import "sections/_locations";
+@import "sections/hero-2";
 @import "sections/whatsnew";
-@import "sections/gallery";
