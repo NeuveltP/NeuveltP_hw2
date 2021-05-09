@@ -1,5 +1,5 @@
 .hero-img{
-    background: url(../../../deploy/img/heroimage.jpg);
+    //background: url(../../../deploy/img/heroimage.jpg);
     background-size: cover;
     background-position: center;
     height: 10px;
@@ -23,10 +23,6 @@
 		}
 		.location a {
 			background: #FAE06A;
-
-			.bold{
-				font-weight:600;
-			}
 			&:hover {
 				background: darken($tangerine, 10%);
 			}

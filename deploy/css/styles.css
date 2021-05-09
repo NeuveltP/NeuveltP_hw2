@@ -536,17 +536,10 @@ main {
     Typography
 ============= */
 body {
-  font-family: "Cardo", serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, button {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.bold {
-  font-family: "Montserrat", sans-serif;
+h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
 }
@@ -801,7 +794,6 @@ header > div section img {
 }
 
 .hero-img {
-  background: url(../../../deploy/img/heroimage.jpg);
   background-size: cover;
   background-position: center;
   height: 10px;
@@ -824,9 +816,6 @@ header > div section img {
 }
 .hero ul .location a {
   background: #FAE06A;
-}
-.hero ul .location a .bold {
-  font-weight: 600;
 }
 .hero ul .location a:hover {
   background: #d1ab00;
