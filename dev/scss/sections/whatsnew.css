@@ -1,0 +1,48 @@
+.whatsnew li {
+  background-color: #FFAB4D;
+}
+.whatsnew li .new-content {
+  padding: 0 30px 30px;
+}
+.whatsnew li button {
+  background: #EE6C4D;
+  border: none;
+  padding: 5px 10px;
+}
+
+.new-image {
+  height: 180px;
+}
+
+.whatsnew-1 .new-image {
+  background: "/deploy/img/whatsnew1.png" no-repeat;
+  background-size: cover;
+}
+.whatsnew-1 ul .details h5 {
+  display: none;
+}
+.whatsnew-1 ul .details a {
+  color: #FAE06A;
+  padding: 10px;
+  min-height: 100px;
+}
+
+#whatsnew-2 .new-image {
+  background: url("/deploy/img/whatsnew2.png") no-repeat;
+  background-size: cover;
+}
+
+#whatsnew-3 .new-image {
+  background: url("/deploy/img/whatsnew3.png") no-repeat;
+  background-size: cover;
+}
+
+#whatsnew-4 .new-image {
+  background: url("/deploy/img/whatsnew4.png") no-repeat;
+  background-size: cover;
+}
+
+#whatsnew-5 .new-image {
+  background: url("/deploy/img/whatsnew5.png") no-repeat;
+  background-size: cover;
+}

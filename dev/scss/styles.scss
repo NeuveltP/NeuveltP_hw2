@@ -8,3 +8,20 @@
 @import "base/_normalize";
 @import "base/_base";
 @import "base/_typography";
+
+// Components Styles
+@import "components/_buttons";
+@import "components/_forms";
+@import "components/_navigation";
+
+// Layout Styles
+@import "layout/header";
+@import "layout/footer";
+
+// Sections Styles
+@import "sections/hero";
+@import "sections/_section-1";
+@import "sections/footer";
+@import "sections/header";
+@import "sections/whatsnew";
+@import "sections/gallery";

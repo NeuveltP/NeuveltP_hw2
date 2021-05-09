@@ -1,0 +1,21 @@
+.footer {
+  background: #023047;
+  padding: 30px;
+}
+.footer h1 {
+  text-align: center;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.footer ul li {
+  margin: 10px;
+}
+.footer ul a:hover {
+  opacity: 0.5;
+  transition: opacity ease 0.2s;
+}

@@ -1,0 +1,13 @@
+form input {
+  width: 80%;
+  padding: 20px;
+}
+
+form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+form button:hover {
+  transition: background-color ease 0.2s;
+}

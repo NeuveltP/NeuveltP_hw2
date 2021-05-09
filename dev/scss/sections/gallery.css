@@ -1,0 +1,23 @@
+.gallery {
+  width: 100%;
+}
+.gallery .image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image1 {
+  background-image: url("/deploy/img/gal1.png");
+  height: 500px;
+  width: 100%;
+}
+.gallery .image2 {
+  background-image: url("/deploy/img/gal2.png");
+  height: 700px;
+  width: 100%;
+}
+.gallery .image3 {
+  background-image: url("/deploy/img/gal3.png");
+  height: 500px;
+  width: 100%;
+  display: none;
+}
