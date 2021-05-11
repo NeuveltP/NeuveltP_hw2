@@ -417,13 +417,13 @@ main {
 @media (min-width: 768px) {
   .hero ul {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
   .hero ul .delivery {
-    grid-column: span 5;
+    grid-column: span 6;
   }
   .hero ul .location {
-    grid-column: span 7;
+    grid-column: span 6;
   }
 }
 .hero .hero-2 {
@@ -479,7 +479,7 @@ main {
   .gallery ul {
     justify-content: center;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "image1 image1 image2 image2" "image1 image1 image3 image3";
   }
   .gallery .image1 {
@@ -495,8 +495,8 @@ main {
 @media (min-width: 1024px) {
   .gallery ul {
     justify-content: center;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "image1 image1 image2 image2" "image1 image1 image3 image3";
   }
   .gallery .image1 {
@@ -513,7 +513,7 @@ main {
   .gallery ul {
     justify-content: center;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "image1 image1 image2 image2" "image1 image1 image3 image3";
   }
   .gallery .image1 {
@@ -531,7 +531,12 @@ main {
   grid-area: whatsnew;
 }
 .whatsnew img {
-  width: 30%;
+  width: 40%;
+}
+@media (min-width: 768px) {
+  .whatsnew img {
+    justify-content: center;
+  }
 }
 .whatsnew ul {
   display: grid;

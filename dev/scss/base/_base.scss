@@ -85,12 +85,12 @@ main{
         @include md {
             ul {
                 grid-template-columns: repeat(12, 1fr);
-                grid-template-rows: repeat(6, 1fr);
+                grid-template-rows: repeat(1, 1fr);
                 .delivery {
-                    grid-column: span 5;
+                    grid-column: span 6;
                 }
                 .location {
-                    grid-column: span 7;
+                    grid-column: span 6;
                 }
                 
             }
@@ -162,7 +162,7 @@ main{
                 justify-content: center;
             
                 grid-template-columns: repeat(5, 1fr);
-				grid-template-rows: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
 				grid-template-areas:
 					"image1 image1 image2 image2"
                     "image1 image1 image3 image3";
@@ -181,8 +181,8 @@ main{
         @include lg {
             ul{
                 justify-content: center;
-                grid-template-columns: repeat(5, 1fr);
-				grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(2, 1fr);
 				grid-template-areas:
 					"image1 image1 image2 image2"
                     "image1 image1 image3 image3";
@@ -202,7 +202,7 @@ main{
             ul{
                 justify-content: center;
                 grid-template-columns: repeat(5, 1fr);
-				grid-template-rows: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
 				grid-template-areas:
 					"image1 image1 image2 image2"
                     "image1 image1 image3 image3";
@@ -226,7 +226,10 @@ main{
     .whatsnew{
         grid-area: whatsnew;
         img {
-            width: 30%;
+            width: 40%;
+            @include md{
+                justify-content: center;
+            }
         }
     
         ul {
