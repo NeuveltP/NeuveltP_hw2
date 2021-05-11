@@ -51,6 +51,20 @@ main{
                 
             }
         }
+        @include lg {
+            ul {
+                grid-template-columns: repeat(12, 1fr);
+    
+                
+            }
+        }
+        @include xl {
+            ul {
+                grid-template-columns: repeat(12, 1fr);
+    
+                
+            }
+        }
     }
 
     .hero{
@@ -82,7 +96,7 @@ main{
             }
             
         }
-    }
+    
     .hero-2 {
         grid-area: hero-2;
         ul {
@@ -91,12 +105,37 @@ main{
     
         .herosec2 {
             display: grid;
-            grid-template-columns: 70% auto;
+            margin:20px;
+            grid-template-columns: 80% auto;
         }
     
         @include md {
             .herosec2 {
+                grid-template-columns: 65% auto;
+                margin:10px;
+                padding: 0px;
+                
+            }
+            ul {
+                grid-template-columns: 50% auto;
+                grid-gap: 20px;
+                margin:10px;
+            }
+        }
+        @include lg {
+            .herosec2 {
                 grid-template-columns: 70% auto;
+                
+            }
+            ul {
+                grid-template-columns: 50% auto;
+                grid-gap: 20px;
+            }
+        }
+        @include xl {
+            .herosec2 {
+                grid-template-columns: 70% auto;
+                
             }
             ul {
                 grid-template-columns: 50% auto;
@@ -104,14 +143,14 @@ main{
             }
         }
     }
-    
+}
     
 
 
     .gallery{
         
         display: grid;
-		
+		justify-content: center;
     
         ul {
 			display: grid;
@@ -120,13 +159,12 @@ main{
         
         @include md {
             ul{
+                justify-content: center;
             
                 grid-template-columns: repeat(5, 1fr);
 				grid-template-rows: repeat(3, 1fr);
 				grid-template-areas:
 					"image1 image1 image2 image2"
-					"image1 image1 image2 image2"
-                    "image1 image1 image3 image3"
                     "image1 image1 image3 image3";
             }
             .image1 {
@@ -140,7 +178,46 @@ main{
             }
     
         }
-          
+        @include lg {
+            ul{
+                justify-content: center;
+                grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				grid-template-areas:
+					"image1 image1 image2 image2"
+                    "image1 image1 image3 image3";
+            }
+            .image1 {
+                grid-area: image1;
+            }
+            .image2 {
+                grid-area: image2;
+            }
+            .image3 {
+                grid-area: image3;
+            }
+    
+        }
+        @include xl {
+            ul{
+                justify-content: center;
+                grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				grid-template-areas:
+					"image1 image1 image2 image2"
+                    "image1 image1 image3 image3";
+            }
+            .image1 {
+                grid-area: image1;
+            }
+            .image2 {
+                grid-area: image2;
+            }
+            .image3 {
+                grid-area: image3;
+            }
+    
+        }
         
     }
     
@@ -191,6 +268,16 @@ main{
                     "new-1 new-1 new-2 new-2 new-3 new-3"
                     ". new-4 new-4 new-5 new-5 .";
             }
+            
+        }
+        @include xl {
+            ul {
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-areas:
+                    "new-1 new-1 new-2 new-2 new-3 new-3"
+                    ". new-4 new-4 new-5 new-5 .";
+            }
+            
         }
     }
 
@@ -229,6 +316,9 @@ main{
         }
     
         @include lg {
+            grid-template-areas: ". locations . newsletter . socials";
+        }
+        @include xl {
             grid-template-areas: ". locations . newsletter . socials";
         }
     }

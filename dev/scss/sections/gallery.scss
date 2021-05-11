@@ -26,7 +26,19 @@
 	}
 	@include md {
 		.image {
-			height: 700px;
+			height: 800px;
+		
+		}
+	}
+	@include lg {
+		.image {
+			height: 900px;
+			width: 800px;
+		}
+	}
+	@include xl {
+		.image {
+			height: 1000px;
 		}
 	}
 	
