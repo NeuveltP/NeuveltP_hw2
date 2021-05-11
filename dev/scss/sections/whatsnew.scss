@@ -1,7 +1,19 @@
 .whatsnew {
+	width: 70%;
+		margin: 30px auto;
 	@include md {
 		width: 75%;
 		margin: 30px auto;
+	}
+
+	@include lg {
+		width: 80%;
+		margin: 40px auto;
+	}
+
+	@include xl {
+		width: 85%;
+		margin: 50px auto;
 	}
 
 	li {
@@ -59,16 +71,7 @@
 		background: url("/deploy/img/whatsnew2.png") no-repeat;
 		background-size: cover;
 	}
-	ul {
-		.details h5 {
-			display: none;
-		}
-		.details a {
-			color:  #FAE06A;
-			padding: 10px;
-			min-height: 10px;
-		}
-	}
+	
 }
 
 #whatsnew-3 {
@@ -76,16 +79,7 @@
 		background: url("/deploy/img/whatsnew3.png") no-repeat;
 		background-size: cover;
 	}
-	ul {
-		.details h5 {
-			display: none;
-		}
-		.details a {
-			color:  #FAE06A;
-			padding: 10px;
-			min-height: 10px;
-		}
-	}
+	
 }
 
 #whatsnew-4 {
@@ -93,16 +87,7 @@
 		background: url("/deploy/img/whatsnew4.png") no-repeat;
 		background-size: cover;
 	}
-	ul {
-		.details h5 {
-			display: none;
-		}
-		.details a {
-			color:  #FAE06A;
-			padding: 10px;
-			min-height: 10px;
-		}
-	}
+	
 }
 
 #whatsnew-5 {
@@ -110,14 +95,5 @@
 		background: url("/deploy/img/whatsnew5.png") no-repeat;
 		background-size: cover;
 	}
-	ul {
-		.details h5 {
-			display: none;
-		}
-		.details a {
-			color:  #FAE06A;
-			padding: 10px;
-			min-height: 10px;
-		}
-	}
+	
 }

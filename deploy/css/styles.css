@@ -885,10 +885,26 @@ form button:hover {
   height: 50px;
 }
 
+.whatsnew {
+  width: 70%;
+  margin: 30px auto;
+}
 @media (min-width: 768px) {
   .whatsnew {
     width: 75%;
     margin: 30px auto;
+  }
+}
+@media (min-width: 1024px) {
+  .whatsnew {
+    width: 80%;
+    margin: 40px auto;
+  }
+}
+@media (min-width: 1200px) {
+  .whatsnew {
+    width: 85%;
+    margin: 50px auto;
   }
 }
 .whatsnew li {
@@ -936,52 +952,20 @@ form button:hover {
   background: url("/deploy/img/whatsnew2.png") no-repeat;
   background-size: cover;
 }
-#whatsnew-2 ul .details h5 {
-  display: none;
-}
-#whatsnew-2 ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
-}
 
 #whatsnew-3 .new-image {
   background: url("/deploy/img/whatsnew3.png") no-repeat;
   background-size: cover;
-}
-#whatsnew-3 ul .details h5 {
-  display: none;
-}
-#whatsnew-3 ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
 }
 
 #whatsnew-4 .new-image {
   background: url("/deploy/img/whatsnew4.png") no-repeat;
   background-size: cover;
 }
-#whatsnew-4 ul .details h5 {
-  display: none;
-}
-#whatsnew-4 ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
-}
 
 #whatsnew-5 .new-image {
   background: url("/deploy/img/whatsnew5.png") no-repeat;
   background-size: cover;
-}
-#whatsnew-5 ul .details h5 {
-  display: none;
-}
-#whatsnew-5 ul .details a {
-  color: #FAE06A;
-  padding: 10px;
-  min-height: 10px;
 }
 
 .gallery {
